@@ -1,8 +1,45 @@
-/* add css styles here (optional) */
+.switch-wrapper {
+  display: flex;
+  align-items: center;
+}
 
-.test {
-  display: inline-block;
-  margin: 2em auto;
-  border: 2px solid #000;
-  font-size: 2em;
+.switch-wrapper > span {
+  margin: 10px;
+  font-size: 12px;
+}
+
+.switch-wrapper > input {
+  display: none;
+}
+
+.switch-body {
+  background-color: #ffffff;
+  width: 48px;
+  border-radius: 24px;
+  border: 1px solid #d9d9d9;
+  transition: background 0.3s ease;
+}
+
+.switch-wrapper .switch-body .switch-toggle {
+  border-radius: 12px;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.switch-toggle:hover {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+.switch-toggle-active {
+  transform: translateX(100%)
+}
+
+.switch-active {
+  background-color : #55D069;
 }
