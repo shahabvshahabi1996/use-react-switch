@@ -15,12 +15,25 @@ npm install --save use-react-switch
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'use-react-switch'
+import Switch from 'use-react-switch'
 
 class Example extends Component {
+  
+  constructor() {
+    super();
+    this.state = {
+      isOpen : false
+    }
+  }
+
   render () {
+    let {isOpen} = this.state;
     return (
-      <MyComponent />
+      <Switch
+        name="switch"
+        onClick={() => this.setState({isOpen : !isOpen})}
+        isOpen={isOpen}
+      />
     )
   }
 }
